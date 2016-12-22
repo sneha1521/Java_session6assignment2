@@ -1,0 +1,75 @@
+2. Implement a class that checks whether a given number is a prime using both the Thread class and Runnable interface :
+
+package prime;
+
+public class thread {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		new Prime().start();
+		new notPrime().start();
+	}
+
+}
+
+
+package prime;
+
+public class Prime extends thread {
+
+	public void start()
+	{
+		try
+		{
+			for(int i=1;i<=10;i++)
+			{
+				if(i==2||i==3||i==5||i==7)
+				{
+					System.out.println ("Prime No.= "+i);
+				}
+				Thread.sleep(500);
+			}
+		}
+		catch (Exception e){}
+	}
+
+
+}
+
+
+package prime;
+
+public class notPrime extends thread {
+
+	public void start()
+	{
+		try
+		{
+			for(int i=1;i<=10;i++)
+			{
+				if(i==4||i==6||i==8||i==9||i==10)
+				{
+					System.out.println ("Non-Prime No.= "+i);
+				}
+				Thread.sleep(500);
+			}
+		}
+		catch (Exception e){}
+	}
+
+	
+}
+
+
+Result :
+
+Prime No.= 2
+Prime No.= 3
+Prime No.= 5
+Prime No.= 7
+Non-Prime No.= 4
+Non-Prime No.= 6
+Non-Prime No.= 8
+Non-Prime No.= 9
+Non-Prime No.= 10
